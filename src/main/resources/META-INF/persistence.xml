@@ -6,10 +6,14 @@
         http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
    <persistence-unit name="stomp-test">
       <jta-data-source>java:jboss/datasources/stomptestDS</jta-data-source>
+      <class>x1.stomp.model.Share</class>
       <properties>
-         <property name="hibernate.hbm2ddl.auto" value="update" />
+         <property name="hibernate.hbm2ddl.auto" value="create-drop" />
          <property name="hibernate.show_sql" value="false" />
+         <!-- 
          <property name="hibernate.default_schema" value="stocks"/>
+          -->
+         <property name="hibernate.connection.url" value="jdbc:h2:mem;INIT=CREATE SCHEMA IF NOT EXISTS stocks"/>
       </properties>
    </persistence-unit>
 </persistence>

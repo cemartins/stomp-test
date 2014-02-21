@@ -227,6 +227,9 @@
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
+        <configuration>
+        	<debug>true</debug>
+        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-war-plugin</artifactId>
@@ -243,7 +246,7 @@
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.6.0.201210061924</version>
+        <version>0.6.4.201312101107</version>
         <executions>
           <execution>
             <id>prepare-agent</id>
@@ -393,7 +396,7 @@
         <dependency>
           <groupId>org.jacoco</groupId>
           <artifactId>org.jacoco.core</artifactId>
-          <version>0.6.0.201210061924</version>
+          <version>0.6.4.201312101107</version>
           <scope>test</scope>
         </dependency>
       </dependencies>
